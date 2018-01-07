@@ -1,0 +1,21 @@
+﻿@model noSQLportal.Models.ArticlesViewModel
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="list-group">
+            <h4>Add new Article</h4>
+            @using (Html.BeginForm("AddNewArticle", "Home", FormMethod.Post))
+            {
+                <div>@Html.LabelFor(m => m.Title)</div>
+                <div class="list-gorup-item">@Html.TextBoxFor(m => m.Title)</div>
+                <div>@Html.LabelFor(m => m.Content)</div>
+                <div class="list-gorup-item">@Html.TextBoxFor(m => m.Content)</div>
+                <div>@Html.LabelFor(m => m.Author)</div>
+                <div class="list-gorup-item">@Html.TextBoxFor(m => m.Author)</div>
+                <br />
+                <input type="submit" value="Save" class="btn btn-default" />
+
+            }
+        </div>
+    </div>
+</div>
